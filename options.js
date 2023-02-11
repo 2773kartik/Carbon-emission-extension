@@ -21,7 +21,7 @@ const displayPages = async () => {
         pageList.appendChild(pageItem2);
         const val = document.createElement('p');
         val.title = page.memory;
-        val.innerHTML = page.memory;
+        val.innerHTML = page.memory + '     ' + page.green;
         pageItem2.appendChild(val);
     });
 }

@@ -20,14 +20,17 @@ class PageService {
 
         return promise;
     }
+    
 
     static savePage = async (title, url, memory) => {
         const pages = await this.getPages();
-        
         const a = new co2.co2;
         memory = await a.perByte(memory).toFixed(3);
-        alert(memory);
-        const updatedPages = [...pages, { title, url, memory }];
+        const b = co2.hosting;
+        
+        const green = await b.check(title);
+        alert(green);
+        const updatedPages = [...pages, { title, url, memory, green }];
 
         const promise = toPromise((resolve, reject) => {
             

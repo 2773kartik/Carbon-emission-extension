@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const dialogBox = document.getElementById('dialog-box');
+    const dialogBox1 = document.getElementById('dialog-box-1');
     
     const carb = new Carbon();
     const tab = await carb.getActiveTab();
@@ -8,7 +9,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     dialogBox.innerHTML = bark;
     // Store page.
     const mem = window.performance.memory.usedJSHeapSize;
-    await PageService.savePage(tab.title, tab.url, mem);
+    const a = new co2.co2;
+    const memory = await a.perByte(mem).toFixed(3);
+    dialogBox1.innerHTML = "CO2 emissions of this page:" + memory + "grams";
+    let l = new URL(tab.url);
+    //const x = l.hostname;
+    alert(l.hostname);
+    await PageService.savePage(l.hostname, tab.url, mem);
 });
 
 const settingsBtn = document.getElementById('optOpen');
