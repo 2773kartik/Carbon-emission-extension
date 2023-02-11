@@ -75,7 +75,6 @@ body {
 
 .header-fixed .header-limiter nav a.selected {
 	color: #d5ff2e;
-	pointer-events: none;
 	opacity: 1;
 }
 

@@ -1,9 +1,14 @@
-#acho {
+body {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+ }
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+#bulb {
     display: block;
-    margin: auto;
-}
-
-#dialog-box {
-    text-align: center;
-    font-size: medium;
+    margin: 0 auto;
 }

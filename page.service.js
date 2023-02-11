@@ -27,7 +27,6 @@ class PageService {
         const b = co2.hosting;
         
         const green = await b.check(title);
-        alert(green);
         const updatedPages = [...pages, { title, url, memory, green }];
 
         const promise = toPromise((resolve, reject) => {
