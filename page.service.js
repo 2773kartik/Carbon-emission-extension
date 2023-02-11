@@ -24,8 +24,6 @@ class PageService {
 
     static savePage = async (title, url, memory) => {
         const pages = await this.getPages();
-        const a = new co2.co2;
-        memory = await a.perByte(memory).toFixed(3);
         const b = co2.hosting;
         
         const green = await b.check(title);

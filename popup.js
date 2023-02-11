@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Store page.
     const mem = window.performance.memory.usedJSHeapSize;
     const a = new co2.co2;
-    const memory = await a.perByte(mem).toFixed(3);
+    const memory = await a.perByte(mem/8).toFixed(3);
     dialogBox1.innerHTML = "CO2 emissions of this page:" + memory + "grams";
     let l = new URL(tab.url);
     //const x = l.hostname;
-    alert(l.hostname);
-    await PageService.savePage(l.hostname, tab.url, mem);
+    await PageService.savePage(l.hostname, tab.url, memory);
 });
 
 const settingsBtn = document.getElementById('optOpen');
