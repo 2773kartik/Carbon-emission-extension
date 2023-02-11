@@ -1,4 +1,4 @@
-importScripts('carbon.js', 'page.service.js');
+importScripts('index.js' ,'carbon.js', 'page.service.js');
 
 chrome.commands.onCommand.addListener(async (command) => {
     switch (command) {

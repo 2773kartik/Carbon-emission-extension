@@ -25,7 +25,7 @@ class Carbon {
      * Hide the browser action badge.
      * @returns {Promise<void>}
      */
-    quiet = async () => {
+    static quiet = async () => {
         await chrome.action.setBadgeText({ text: '' });
     }
 }

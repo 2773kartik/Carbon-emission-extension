@@ -29,7 +29,6 @@ const displayPages = async () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     await displayPages();
-
     
     // Clear history
     const clearHistoryBtn = document.getElementById('clear-history');
@@ -37,5 +36,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         await PageService.clearPages();
         await displayPages();
     };
-    await acho.quiet();
+    await Carbon.quiet();
 });
