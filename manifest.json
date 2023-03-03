@@ -31,8 +31,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["index.js", "index.js.map", "content.js", "carbon.js"],
-            "css": ["content.css"]
+            "js": ["index.js", "index.js.map", "content.js", "carbon.js"]
         }
     ],
     "web_accessible_resources": [
